@@ -37,15 +37,15 @@ var reverseVowels = function(s) {
 
 // Method 2
 var reverseVowels = function(s) {
-    var vows = new Set(['a', 'e', 'i', 'o', 'u']);
+    var vows = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
     var start = 0;
     var sArr = s.split('');
     var end = sArr.length - 1;
     while (start < end) {
-        while (start < end && !vows.has(sArr[start].toLowerCase())) {
+        while (start < end && !vows.has(sArr[start])) {
             start++;
         }
-        while (start < end && !vows.has(sArr[end].toLowerCase())) {
+        while (start < end && !vows.has(sArr[end])) {
             end--;
         }
         var temp = sArr[end];
